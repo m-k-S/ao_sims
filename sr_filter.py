@@ -9,8 +9,8 @@ wavelength_461 = 461e-9  # m (1S0 -> 1P1 blue transition)
 atomic_weight_sr88 = 87.9056  # amu
 sr88_mass = atomic_weight_sr88 * atomic_mass  # kg
 
-atom_number = 5 * 10e7
-temperature = 1e-4  # K (100 uK)
+atom_number = 10e7
+temperature = 0.01  # K (1000 uK)
 mot_diameter = 0.005  # m 
 
 cross_section_689 = 3 * wavelength_689**2 / (2 * np.pi)
@@ -29,7 +29,7 @@ print(f"Natural linewidth: {natural_linewidth_689/1e3:.3f} kHz")
 
 freq_range = np.linspace(-500, 500, 1000)  # kHz
 on_resonance_freq = 0  # kHz (exactly on resonance)
-blue_detuned_freq = 200  # kHz (blue-detuned by 200 kHz)
+blue_detuned_freq = 1000  # kHz (blue-detuned by 200 kHz)
 
 gamma = natural_linewidth_689 / 2 / 1e3  # Natural linewidth in kHz (HWHM)
 sigma = doppler_fwhm / 2.355 / 1e3  # Doppler width in kHz (standard deviation)
